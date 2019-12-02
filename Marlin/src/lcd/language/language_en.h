@@ -70,7 +70,8 @@ namespace Language_en {
   PROGMEM Language_Str MSG_AUTO_HOME_X                     = _UxGT("Home X");
   PROGMEM Language_Str MSG_AUTO_HOME_Y                     = _UxGT("Home Y");
   PROGMEM Language_Str MSG_AUTO_HOME_Z                     = _UxGT("Home Z");
-  PROGMEM Language_Str MSG_AUTO_Z_ALIGN                    = _UxGT("Auto Z-Align");
+	PROGMEM Language_Str MSG_AUTO_HOME_Z_OFFSET                     = _UxGT("Auto Home Z Offset .15");
+	PROGMEM Language_Str MSG_AUTO_Z_ALIGN                    = _UxGT("Auto Z-Align");
   PROGMEM Language_Str MSG_LEVEL_BED_HOMING                = _UxGT("Homing XYZ");
   PROGMEM Language_Str MSG_LEVEL_BED_WAITING               = _UxGT("Click to Begin");
   PROGMEM Language_Str MSG_LEVEL_BED_NEXT_POINT            = _UxGT("Next Point");

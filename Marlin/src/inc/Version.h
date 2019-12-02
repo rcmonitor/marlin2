@@ -25,7 +25,7 @@
  * Release version. Leave the Marlin version or apply a custom scheme.
  */
 #ifndef SHORT_BUILD_VERSION
-  #define SHORT_BUILD_VERSION "bugfix-2.0.x"
+  #define SHORT_BUILD_VERSION "bugfix-2.0.x " MACHINE_NAME
 #endif
 
 /**
@@ -33,7 +33,7 @@
  * vendor name, download location, GitHub account, etc.
  */
 #ifndef DETAILED_BUILD_VERSION
-  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " (GitHub)"
+  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " (mods_by_rcmonitor)"
 #endif
 
 /**
@@ -73,7 +73,7 @@
  * Define a generic printer name to be output to the LCD after booting Marlin.
  */
 #ifndef MACHINE_NAME
-  #define MACHINE_NAME "3D Printer"
+  #define MACHINE_NAME "rcm218x219_017"
 #endif
 
 /**

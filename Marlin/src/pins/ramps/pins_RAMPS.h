@@ -166,6 +166,9 @@
 #ifndef TEMP_BED_PIN
   #define TEMP_BED_PIN     14   // Analog Input
 #endif
+#ifndef TEMP_CHAMBER_PIN
+	#define TEMP_CHAMBER_PIN	3
+#endif
 
 // SPI for Max6675 or Max31855 Thermocouple
 #if DISABLED(SDSUPPORT)
@@ -229,7 +232,8 @@
 
 #ifndef FAN_PIN
   #if EITHER(IS_RAMPS_EFB, IS_RAMPS_EFF)          // Hotend, Fan, Bed or Hotend, Fan, Fan
-    #define FAN_PIN        RAMPS_D9_PIN
+	  #define FAN_PIN        5	//RAMPS_D9_PIN
+	  #define HEATER_CHAMBER_PIN	RAMPS_D9_PIN
   #elif EITHER(IS_RAMPS_EEF, IS_RAMPS_SF)         // Hotend, Hotend, Fan or Spindle, Fan
     #define FAN_PIN        RAMPS_D8_PIN
   #elif ENABLED(IS_RAMPS_EEB)                  // Hotend, Hotend, Bed
@@ -573,10 +577,10 @@
 
     #elif EITHER(MKS_MINI_12864, FYSETC_MINI_12864)
 
-      #define BEEPER_PIN        37
-      #define BTN_ENC           35
+      #define BEEPER_PIN        -1	//33
+      #define BTN_ENC           31
       #define SD_DETECT_PIN     49
-      #define KILL_PIN          41
+      #define KILL_PIN          64
 
       #if ENABLED(MKS_MINI_12864)   // Added in Marlin 1.1.6
 
@@ -592,8 +596,8 @@
         // not connected to a pin
         #define LCD_BACKLIGHT_PIN 65   // backlight LED on A11/D65
 
-        #define BTN_EN1         31
-        #define BTN_EN2         33
+        #define BTN_EN1         35
+        #define BTN_EN2         37
 
       #elif ENABLED(FYSETC_MINI_12864)
 
