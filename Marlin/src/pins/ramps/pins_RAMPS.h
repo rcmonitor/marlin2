@@ -158,7 +158,7 @@
 // Temperature Sensors
 //
 #ifndef TEMP_0_PIN
-  #define TEMP_0_PIN       13   // Analog Input
+  #define TEMP_0_PIN       3   // Analog Input
 #endif
 #ifndef TEMP_1_PIN
   #define TEMP_1_PIN       15   // Analog Input
@@ -167,7 +167,7 @@
   #define TEMP_BED_PIN     14   // Analog Input
 #endif
 #ifndef TEMP_CHAMBER_PIN
-	#define TEMP_CHAMBER_PIN	3
+	#define TEMP_CHAMBER_PIN	0	//3
 #endif
 
 // SPI for Max6675 or Max31855 Thermocouple
@@ -233,7 +233,7 @@
 #ifndef FAN_PIN
   #if EITHER(IS_RAMPS_EFB, IS_RAMPS_EFF)          // Hotend, Fan, Bed or Hotend, Fan, Fan
 	  #define FAN_PIN        5	//RAMPS_D9_PIN
-	  #define HEATER_CHAMBER_PIN	RAMPS_D9_PIN
+	  #define HEATER_CHAMBER_PIN	0 //RAMPS_D9_PIN
   #elif EITHER(IS_RAMPS_EEF, IS_RAMPS_SF)         // Hotend, Hotend, Fan or Spindle, Fan
     #define FAN_PIN        RAMPS_D8_PIN
   #elif ENABLED(IS_RAMPS_EEB)                  // Hotend, Hotend, Bed
