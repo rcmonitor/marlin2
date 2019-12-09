@@ -73,7 +73,7 @@
  * Define a generic printer name to be output to the LCD after booting Marlin.
  */
 #ifndef MACHINE_NAME
-  #define MACHINE_NAME "rcm218x219_017"
+  #define MACHINE_NAME "2.9_ch_218x219_020"
 #endif
 
 /**
