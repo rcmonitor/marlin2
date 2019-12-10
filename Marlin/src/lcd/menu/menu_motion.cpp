@@ -419,13 +419,8 @@ void menu_motion() {
     GCODES_ITEM(MSG_AUTO_HOME_Z, PSTR("G28 Z"));
   #endif
 
-//    PGM_P MSG_AUTO_HOME_Z_OFFSET = PSTR("auto home z .15");
-//    static const char AUTO_HOME_Z_OFFSET_MESSAGE[] PROGMEM = "auto home z 15";
 
-//	GCODES_ITEM(MSG_AUTO_HOME, PSTR("G28 Z \n G1 Z1 F2000 \n G1 X15 Y15 Z0.15 F500"));
-	GCODES_ITEM(MSG_AUTO_HOME_Z_OFFSET, PSTR("G28 Z \n G1 Z1 F2000 \n G1 X15 Y15 Z0.15 F500"));
-//	SUBMENU(msg_home_z_offset, [](){queue.inject_P("G28 Z");});
-//	SUBMENU(MSG_AUTO_HOME, lcd_enque_set);
+	GCODES_ITEM(MSG_AUTO_HOME_Z_OFFSET, PSTR("G28 Z \n G1 Z1 F4000 \n G1 X15 Y15 Z0.2 F1500"));
 
   //
   // Auto Z-Align

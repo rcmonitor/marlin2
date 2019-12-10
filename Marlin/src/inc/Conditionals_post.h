@@ -1669,7 +1669,7 @@
 
 // LCD timeout to status screen default is 15s
 #ifndef LCD_TIMEOUT_TO_STATUS
-  #define LCD_TIMEOUT_TO_STATUS 15000
+  #define LCD_TIMEOUT_TO_STATUS 42000
 #endif
 
 // Add commands that need sub-codes to this list
