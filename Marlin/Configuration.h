@@ -519,7 +519,7 @@
  */
 #define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
-#define MAX_CHAMBER_POWER 42
+#define MAX_CHAMBER_POWER 50
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
