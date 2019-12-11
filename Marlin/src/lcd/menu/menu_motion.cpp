@@ -420,7 +420,7 @@ void menu_motion() {
   #endif
 
 
-	GCODES_ITEM(MSG_AUTO_HOME_Z_OFFSET, PSTR("G28 Z \n G1 Z1 F4000 \n G1 X15 Y15 Z0.25 F1500"));
+	GCODES_ITEM(MSG_AUTO_HOME_Z_OFFSET, PSTR("G28 Z \n G1 Z1 F4000 \n G1 X15 Y15 Z0.3 F1500"));
 
   //
   // Auto Z-Align
