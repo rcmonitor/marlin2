@@ -299,6 +299,14 @@ FORCE_INLINE void _draw_centered_temp(const int16_t temp, const uint8_t tx, cons
 
 #endif // DO_DRAW_CHAMBER
 
+#if ENABLED(RCM_CUSTOM_LAYOUT)
+
+	FORCE_INLINE void _draw_probe_temp() {
+		_draw_centered_temp(thermalManager.degProbe() + 0.5f, 40, 28);
+	}
+
+#endif // RCM_CUSTOM_LAYOUT
+
 //
 // Before homing, blink '123' <-> '???'.
 // Homed but unknown... '123' <-> '   '.
@@ -583,6 +591,10 @@ void MarlinUI::draw_status_screen() {
     // Heated Chamber
     #if DO_DRAW_CHAMBER
       _draw_chamber_status();
+	#endif
+
+	#if ENABLED(RCM_CUSTOM_LAYOUT)
+      _draw_probe_temp();
     #endif
 
     // Fan, if a bitmap was provided

@@ -415,7 +415,7 @@
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
 #define TEMP_SENSOR_BED 1
-#define TEMP_SENSOR_PROBE 0
+#define TEMP_SENSOR_PROBE 20
 #define TEMP_SENSOR_CHAMBER -4
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
@@ -529,7 +529,7 @@
  */
 #define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
-#define MAX_CHAMBER_POWER 32
+#define MAX_CHAMBER_POWER 42
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
@@ -869,7 +869,7 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//#define FIX_MOUNTED_PROBE
+#define FIX_MOUNTED_PROBE
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1358,7 +1358,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
@@ -1971,6 +1971,7 @@
 // https://reprap.org/wiki/MKS_MINI_12864
 //
 #define MKS_MINI_12864
+#define RCM_CUSTOM_LAYOUT
 
 //
 // FYSETC variant of the MINI12864 graphic controller with SD support

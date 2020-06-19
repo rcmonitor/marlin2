@@ -171,6 +171,9 @@
 #ifndef TEMP_CHAMBER_PIN
 	#define TEMP_CHAMBER_PIN	3
 #endif
+#ifndef TEMP_PROBE_PIN
+	#define TEMP_PROBE_PIN	9
+#endif
 
 //
 // SPI for Max6675 or Max31855 Thermocouple
@@ -599,12 +602,12 @@
 
     #elif EITHER(MKS_MINI_12864, FYSETC_MINI_12864)
 
-      #define BEEPER_PIN                      37	//set to -1 if not working
-      #define BTN_ENC                         31	//35
+      #define BEEPER_PIN                      -1	//set to -1 if not working //37 default
+      #define BTN_ENC                         31	//31 default
       #define SD_DETECT_PIN                   49
 
       #ifndef KILL_PIN
-        #define KILL_PIN                      41	//set to 64 if not working
+        #define KILL_PIN                      64	//set to 64 if not working // 41 default
       #endif
 
       #if ENABLED(MKS_MINI_12864)                 // Added in Marlin 1.1.6
@@ -621,8 +624,8 @@
         // not connected to a pin
         #define LCD_BACKLIGHT_PIN             65  // 65 (MKS mini12864 can't adjust backlight by software!)
 
-        #define BTN_EN1                       35	//31
-        #define BTN_EN2                       37	//33
+        #define BTN_EN1                       35	//35 default
+        #define BTN_EN2                       37	//37 default
 
       #elif ENABLED(FYSETC_MINI_12864)
 

@@ -331,8 +331,8 @@
 // The final temperature is calculated as (measuredTemp * GAIN) + OFFSET.
 #define TEMP_SENSOR_AD595_OFFSET  0.0
 #define TEMP_SENSOR_AD595_GAIN    1.0
-#define TEMP_SENSOR_AD8495_OFFSET 0.0
-#define TEMP_SENSOR_AD8495_GAIN   1.0
+#define TEMP_SENSOR_AD8495_OFFSET -191.89
+#define TEMP_SENSOR_AD8495_GAIN   1.235
 
 /**
  * Controller Fan
@@ -430,8 +430,8 @@
 
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 50
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
-#define CHAMBER_AUTO_FAN_TEMPERATURE 42
-#define CHAMBER_AUTO_FAN_SPEED 128
+#define CHAMBER_AUTO_FAN_TEMPERATURE 50
+#define CHAMBER_AUTO_FAN_SPEED 142
 
 /**
  * Part-Cooling Fan Multiplexer
@@ -1004,7 +1004,7 @@
 //#define LCD_SET_PROGRESS_MANUALLY
 
 // Show the E position (filament used) during printing
-//#define LCD_SHOW_E_TOTAL
+#define LCD_SHOW_E_TOTAL
 
 #if ENABLED(SHOW_BOOTSCREEN)
   #define BOOTSCREEN_TIMEOUT 4000        // (ms) Total Duration to display the boot screen(s)
