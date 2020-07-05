@@ -402,7 +402,10 @@ void menu_motion() {
   #endif
 
 
-	GCODES_ITEM(MSG_AUTO_HOME_Z_OFFSET, PSTR("G28 Z \n G1 Z1 F4000 \n G1 X15 Y15 Z0.3 F1500"));
+//    mods by rcmonitor
+// X15 Y15
+// G1 Z1 F4000 
+    GCODES_ITEM(MSG_AUTO_HOME_Z_OFFSET, PSTR("G28 Z \n G1 Z0.4 F2000"));
 
   //
   // Auto Z-Align

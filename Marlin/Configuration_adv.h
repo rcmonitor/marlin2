@@ -118,8 +118,8 @@
  */
 #if TEMP_SENSOR_CHAMBER
   #define CHAMBER_MINTEMP             5
-  #define CHAMBER_MAXTEMP            260
-  #define TEMP_CHAMBER_HYSTERESIS     2   // (°C) Temperature proximity considered "close enough" to the target
+  #define CHAMBER_MAXTEMP            280
+  #define TEMP_CHAMBER_HYSTERESIS     4   // (°C) Temperature proximity considered "close enough" to the target
   //#define CHAMBER_LIMIT_SWITCHING
   //#define HEATER_CHAMBER_PIN       44   // Chamber heater on/off pin
   //#define HEATER_CHAMBER_INVERTING false
@@ -191,13 +191,13 @@
  * Thermal Protection parameters for the heated chamber.
  */
 #if ENABLED(THERMAL_PROTECTION_CHAMBER)
-  #define THERMAL_PROTECTION_CHAMBER_PERIOD 30    // Seconds
-  #define THERMAL_PROTECTION_CHAMBER_HYSTERESIS 10 // Degrees Celsius
+  #define THERMAL_PROTECTION_CHAMBER_PERIOD 20    // Seconds
+  #define THERMAL_PROTECTION_CHAMBER_HYSTERESIS 2 // Degrees Celsius
 
   /**
    * Heated chamber watch settings (M141/M191).
    */
-  #define WATCH_CHAMBER_TEMP_PERIOD            80 // Seconds
+  #define WATCH_CHAMBER_TEMP_PERIOD            20 // Seconds
   #define WATCH_CHAMBER_TEMP_INCREASE           2 // Degrees Celsius
 #endif
 
@@ -431,7 +431,7 @@
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 50
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
 #define CHAMBER_AUTO_FAN_TEMPERATURE 50
-#define CHAMBER_AUTO_FAN_SPEED 142
+#define CHAMBER_AUTO_FAN_SPEED 192
 
 /**
  * Part-Cooling Fan Multiplexer
